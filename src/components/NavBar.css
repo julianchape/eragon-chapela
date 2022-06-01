@@ -1,0 +1,106 @@
+nav {
+    grid-area: navbar;
+    z-index: 999;
+    width: 100%;
+    height: 45px;
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #2626bbb6; }
+nav .hamburguesa {
+    margin-right: 19px; }
+nav img {
+    margin-left: 16px;
+    width: 64px; }
+nav span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin-bottom: 2px;
+    position: relative;
+    background: #000;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+    nav span:first-child {
+        transform-origin: 0% 0%; }
+    nav span:nth-last-child(2) {
+        transform-origin: 0% 100%; }
+        nav input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px); }
+ nav input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2); }
+ nav input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0px, -1px); }
+ nav ul {
+  width: 100%;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  overflow: hidden;
+  list-style: none;
+  background: #2626bbb6;
+  height: 0px; }
+ nav ul li {
+    position: relative;
+    margin: 16px 217px 24px 16px; }
+     nav ul li a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 400;
+      font-size: 16px;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      line-height: 28px;
+      position: relative;
+      text-decoration: none;
+      display: block; }
+ nav input[type="checkbox"]:checked ~ ul {
+  height: 224px; }
+ nav input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  opacity: 0;
+  z-index: 2;
+  position: absolute; }
+
+  @media screen and (min-width: 1000px) {
+    nav {
+        height: auto; }
+    nav img {
+        margin-left: 32px;
+        width: 50px; }
+    nav .hamburguesa {
+        margin-right: 100px; }
+    nav input {
+        display: none; }
+    nav span {
+        display: none; }
+    nav ul {
+    position: relative;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        background: unset;
+        height: unset; }
+    nav ul li {
+        margin: unset;
+        margin-right: 48px;
+        display: inline-block;
+        margin-top: 16px;
+        margin-bottom: 16px; }
+    nav ul li a {
+        padding: unset;
+        line-height: unset;
+        color: black; }
+    nav ul li a:hover {
+        color: #00F3BB;
+        text-decoration: line-through; }
+    nav ul li a:active {
+        color: rgba(6, 10, 36, 0.56);
+        text-decoration: line-through; }
+        }
